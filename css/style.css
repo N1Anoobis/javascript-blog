@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
 /* Variables */
 /* Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
-  background: #fff;
-  font-family: "Source Sans Pro", sans-serif;
-  color: #444;
+  background: #685b44;
+  font-family: "Arial", sans-serif;
+  color: #7997ac;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -29,7 +31,12 @@ body {
 .section-title span {
   text-transform: none;
   font-weight: 400;
-  color: #777777;
+  color: #b8c8d3;
+}
+
+a {
+  text-decoration: none;
+  color: #7997ac;
 }
 
 /* Layout */
@@ -47,13 +54,15 @@ body {
 .posts {
   -ms-flex: 2 0 0px;
       flex: 2 0 0;
+  position: relative;
 }
 
-.sidebar, .posts {
-  background: #fff;
+.sidebar,
+.posts {
+  background: #1b1818;
   margin-right: 10px;
   padding: 40px;
-  border: 1px solid #444;
+  border: 1px solid #7997ac;
   border-radius: 5px;
 }
 
@@ -88,11 +97,21 @@ body {
 
 /* Post */
 .post {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  text-align: justify;
+  padding-right: 25px;
+  overflow: hidden;
 }
 
 .post.active {
-  display: block;
+  position: absolute;
+  transition: 3s;
+  color: #7997ac;
+  opacity: 1;
+  text-align: justify;
+  padding-right: 25px;
+  z-index: 1;
 }
 
 .post-author {
@@ -106,5 +125,59 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+/* mediaquery */
+@media (max-width: 800px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 35% 1fr;
+        grid-template-columns: 35% 1fr;
+    grid-gap: 1px;
+  }
+  .sidebar {
+    text-align: center;
+  }
+  .sidebar h2 {
+    text-align: center;
+    font-size: 16px;
+  }
+  .posts {
+    -ms-grid-column: 2;
+        grid-column: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-row: 1;
+        grid-row: 1 / span 2;
+  }
+}
+
+@media (max-width: 460px) {
+  .posts {
+    -ms-flex: 2 0 0px;
+        flex: 2 0 0;
+    position: static;
+  }
+  .post {
+    padding: 0;
+  }
+  .post.active {
+    position: static;
+    padding: 0;
+  }
+  .wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+  .sidebar {
+    text-align: center;
+  }
+  .sidebar,
+  .posts {
+    margin: auto;
+    width: 95%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
