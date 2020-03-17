@@ -1,11 +1,11 @@
 {
-// function to keep absolute elements right sizes
+  // function to keep absolute elements right sizes
   function checkDisplaySize() {
-      activeParagraf = document.querySelector('.posts .active');
-      variable = activeParagraf.offsetHeight;
-      // console.log(variable)
-      mainWrapper = document.querySelector('.wrapper');
-      mainWrapper.style.height = `${variable+100}px`;
+    const activeParagraf = document.querySelector('.posts .active');
+    const variable = activeParagraf.offsetHeight;
+    // console.log(variable)
+    const mainWrapper = document.querySelector('.wrapper');
+    mainWrapper.style.height = `${variable+100}px`;
     // }
   }
 
@@ -26,14 +26,14 @@
       activeArticle.classList.remove('active');
     }
     /* get 'href' attribute from the clicked link */
-    let attribute = clickedElement.getAttribute('href')
+    let attribute = clickedElement.getAttribute('href');
 
     /* find the correct article using the selector (value of 'href' attribute) */
-    targetArticle = document.querySelector(attribute);
+    const targetArticle = document.querySelector(attribute);
 
     /* add class 'active' to the correct article */
     targetArticle.classList.add('active');
-  }
+  };
 
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
@@ -41,7 +41,7 @@
 
   function generateTitleLinks() {
     /* remove contents of titleList */
-    titleList = document.querySelector(optTitleListSelector);
+    let titleList = document.querySelector(optTitleListSelector);
     titleList.innerHTML = '';
     /* for each article */
     const articles = document.querySelectorAll(optArticleSelector);
@@ -49,7 +49,7 @@
     let html = '';
     for (let article of articles) {
       /* get the article id */
-      articleId = article.getAttribute('id');
+      let articleId = article.getAttribute('id');
       /* find the title element */
       /* get the title from the title element */
       const articleTitle = article.querySelector(optTitleSelector).innerHTML;
@@ -70,11 +70,11 @@
 
     for (let link of links) {
       link.addEventListener('click', titleClickHandler);
-      link.addEventListener("click", checkDisplaySize);
+      link.addEventListener('click', checkDisplaySize);
     }
   }
-  generateTitleLinks()
+  generateTitleLinks();
   // check size of parent por absolute element to display
-  window.addEventListener("load", checkDisplaySize);
+  window.addEventListener('load', checkDisplaySize);
   window.addEventListener('resize', checkDisplaySize);
 }

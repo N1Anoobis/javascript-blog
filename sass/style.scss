@@ -121,11 +121,13 @@ a {
 /* Post */
 
 .post {
+  // display: none;
   position: absolute;
   opacity: 0;
   text-align: justify;
   padding-right: 25px;
   overflow: hidden;
+  // margin: auto;
 
   &.active {
 
