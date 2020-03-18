@@ -131,7 +131,7 @@ a {
 
   &.active {
 
-    position: absolute;
+    position: relative;
     transition: 3s;
     color: $color-dark;
     opacity: 1;

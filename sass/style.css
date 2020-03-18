@@ -109,7 +109,7 @@ a {
 }
 
 .post.active {
-  position: absolute;
+  position: relative;
   -webkit-transition: 3s;
   transition: 3s;
   color: #7997ac;
