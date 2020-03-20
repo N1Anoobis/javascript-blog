@@ -104,7 +104,6 @@ a {
   position: absolute;
   opacity: 0;
   text-align: justify;
-  padding-right: 25px;
   overflow: hidden;
 }
 
@@ -115,7 +114,6 @@ a {
   color: #7997ac;
   opacity: 1;
   text-align: justify;
-  padding-right: 25px;
   z-index: 1;
 }
 
@@ -131,6 +129,30 @@ a {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+ul .list a, .tags a {
+  display: inline-block;
+}
+
+.tag-size-1 {
+  font-size: 12px;
+}
+
+.tag-size-2 {
+  font-size: 15px;
+}
+
+.tag-size-3 {
+  font-size: 18px;
+}
+
+.tag-size-4 {
+  font-size: 22px;
+}
+
+.tag-size-5 {
+  font-size: 24px;
 }
 
 /* mediaquery */

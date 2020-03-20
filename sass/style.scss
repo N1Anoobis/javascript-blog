@@ -65,6 +65,12 @@ a {
 
 .sidebar {
   flex: 1 0 0;
+
+  .tags {
+    a {
+      // display: inline-block;
+    }
+  }
 }
 
 .posts {
@@ -125,7 +131,7 @@ a {
   position: absolute;
   opacity: 0;
   text-align: justify;
-  padding-right: 25px;
+  // padding-right: 25px;
   overflow: hidden;
   // margin: auto;
 
@@ -136,7 +142,7 @@ a {
     color: $color-dark;
     opacity: 1;
     text-align: justify;
-    padding-right: 25px;
+    // padding-right: 25px;
     z-index: 1;
   }
 }
@@ -152,6 +158,31 @@ a {
     margin: 0 10px 0 0;
   }
 }
+ul .list, .tags{
+  
+  a {
+    display: inline-block;
+    
+  };
+
+}
+.tag-size-1 {font-size: 12px;}
+
+.tag-size-2 {font-size: 15px;}
+
+.tag-size-3 {font-size: 18px;}
+
+.tag-size-4 {font-size: 22px;}
+
+.tag-size-5 {font-size: 24px;}
+
+
+
+
+
+
+
+
 
 /* mediaquery */
 
