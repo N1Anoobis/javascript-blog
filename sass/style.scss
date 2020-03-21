@@ -27,13 +27,11 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-
 }
 
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  // max-height: 1000px;
 }
 
 .section-title {
@@ -59,24 +57,19 @@ a {
 .wrapper {
   display: flex;
   margin-left: 10px;
+}
 
-
+li {
+  list-style: none;
 }
 
 .sidebar {
   flex: 1 0 0;
-
-  .tags {
-    a {
-      // display: inline-block;
-    }
-  }
 }
 
 .posts {
   flex: 2 0 0;
   position: relative;
-
 }
 
 .sidebar,
@@ -119,21 +112,21 @@ a {
 /* Authors */
 
 .authors {
-  li {
-    margin-bottom: 12px;
+
+  margin-bottom: 12px;
+
+  a {
+    display: block;
   }
 }
 
 /* Post */
 
 .post {
-  // display: none;
   position: absolute;
   opacity: 0;
   text-align: justify;
-  // padding-right: 25px;
   overflow: hidden;
-  // margin: auto;
 
   &.active {
 
@@ -142,7 +135,6 @@ a {
     color: $color-dark;
     opacity: 1;
     text-align: justify;
-    // padding-right: 25px;
     z-index: 1;
   }
 }
@@ -158,34 +150,39 @@ a {
     margin: 0 10px 0 0;
   }
 }
-ul .list, .tags{
-  
-  a {
+
+ul .list,
+.tags {
+  li {
     display: inline-block;
-    
-  };
 
+    a {
+      display: inline-block;
+    }
+  }
 }
-.tag-size-1 {font-size: 12px;}
 
-.tag-size-2 {font-size: 15px;}
+.tag-size-1 {
+  font-size: 12px;
+}
 
-.tag-size-3 {font-size: 18px;}
+.tag-size-2 {
+  font-size: 15px;
+}
 
-.tag-size-4 {font-size: 22px;}
+.tag-size-3 {
+  font-size: 18px;
+}
 
-.tag-size-5 {font-size: 24px;}
+.tag-size-4 {
+  font-size: 22px;
+}
 
-
-
-
-
-
-
-
+.tag-size-5 {
+  font-size: 24px;
+}
 
 /* mediaquery */
-
 @media (max-width: 800px) {
   .wrapper {
     display: grid;

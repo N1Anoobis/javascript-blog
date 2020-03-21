@@ -46,6 +46,10 @@ a {
   margin-left: 10px;
 }
 
+li {
+  list-style: none;
+}
+
 .sidebar {
   -ms-flex: 1 0 0px;
       flex: 1 0 0;
@@ -91,8 +95,12 @@ a {
 }
 
 /* Authors */
-.authors li {
+.authors {
   margin-bottom: 12px;
+}
+
+.authors a {
+  display: block;
 }
 
 /* Post */
@@ -125,7 +133,13 @@ a {
   margin: 0 10px 0 0;
 }
 
-ul .list a, .tags a {
+ul .list li,
+.tags li {
+  display: inline-block;
+}
+
+ul .list li a,
+.tags li a {
   display: inline-block;
 }
 
