@@ -282,7 +282,7 @@
 
     }
     let placeToPaste = document.querySelector(opt.optAuthorsListSelector);
-    //creara array for Handlebars
+    //create array for Handlebars
     // let allAuthorsHTML = '';
     const allAuthorsData = {
       tags: []
